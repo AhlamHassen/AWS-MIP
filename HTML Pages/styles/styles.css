@@ -12,8 +12,9 @@ body{
 
 /*header for each page*/
 header{
-    
-    padding:20px;
+    display: flex;
+    flex-direction: column;
+    padding:20px 20px 0 20px;
     width: auto;
     color: black;
     margin: 0;
@@ -25,6 +26,10 @@ header{
 
 /*header-class-banner*/
 .banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15% 0 15%;
     overflow: auto;
     width: auto;
     background-color: #c2c2c2;
@@ -48,12 +53,40 @@ h1{
 
 .menu {
     background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 nav{
-    float: right;
-    margin-top: 20px;
+
     font-size: 1.1em;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
 }
 
+nav a {
+
+    list-style-type: none;
+    color: #000;
+}
+
+nav  a:hover{
+    color: white;
+}
+
+/*---------------------------------------------------------------*/
+/*----Footer section CSS-------------------------------------------*/
+footer{
+    background-color: #c2c2c2;
+    color: white;
+    font-weight: light;
+    padding: 0 15% 0 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
