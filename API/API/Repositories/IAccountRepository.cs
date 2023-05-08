@@ -4,9 +4,9 @@ namespace API.Repositories
 {
     public interface IAccountRepository
     {
-        Task<Account> GetAccountsByCustomerAsync(int customerId);
-        Task CreateAccount(Account account);
-        Task UpdateAccount(Account account);
-        Task DeleteAccount(int accountId);
+        Task<Account[]> GetAccountsByCustomerAsync(int customerId);
+        Task CreateAsync(Account account);
+        Task UpdateAsync(Account account);
+        Task DeleteAsync(int accountId);
     }
 }

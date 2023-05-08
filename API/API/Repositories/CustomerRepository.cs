@@ -8,24 +8,26 @@ namespace API.Repositories
     {
         private readonly IDbConnection _conn;
 
+        public CustomerRepository(IDbConnection conn) { _conn = conn; }
+
         public async Task CreateAsync(Customer customer)
         {
             const string sql = "INSERT INTO Customer (FirstName, LastName, Email, Phone, Address) VALUES (@FirstName, @LastName, @Email, @Phone, @Address);";
             await _conn.ExecuteAsync(sql, customer);
         }
 
-        public async Task DeleteAsync(Customer customer)
+        public async Task DeleteAsync(int id)
         {
             const string sql = "DELETE FROM Customer WHERE Id = @Id;";
-            await _conn.ExecuteAsync(sql, customer);
+            await _conn.ExecuteAsync(sql, id);
         }
 
         public async Task<Customer[]> GetAllAsync()
         {
             const string sql = "SELECT * FROM Customer;";
-            Customer[] customers = (await _conn.QueryAsync<Customer>(sql)).ToArray();
+            var customers = await _conn.QueryAsync<Customer>(sql);
 
-            return customers;
+            return customers.ToArray();
         }
 
         public async Task<Customer> GetAsync(int id)

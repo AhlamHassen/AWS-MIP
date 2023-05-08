@@ -9,6 +9,6 @@ namespace API.Repositories
 
         Task CreateAsync(Customer customer);
         Task UpdateAsync(Customer customer);
-        Task DeleteAsync(Customer customer);
+        Task DeleteAsync(int id);
     }
 }

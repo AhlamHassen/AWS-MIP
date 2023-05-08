@@ -44,9 +44,9 @@
               "target": "Package",
               "version": "[2.0.123, )"
             },
-            "System.Data.SqlClient": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
