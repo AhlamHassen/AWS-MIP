@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Dapper;
-using System.Data.SqlClient;
+﻿using Microsoft.AspNetCore.Mvc;
 using API.Repositories;
 using API.Models;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerRepository _customerRepository;
@@ -19,13 +16,13 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var customers = _customerRepository.GetAllAsync();
+            var customers = await _customerRepository.GetAllAsync();
             return Ok(customers);
         }
 
-        [HttpGet("{id")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id) 
         {
             var customer = await _customerRepository.GetAsync(id);
@@ -48,7 +45,7 @@ namespace API.Controllers
             // return CreatedAtAction(nameof(GetById), new {id=customer.Id},customer);
         }
 
-        [HttpPut("{id")]
+        [HttpPut]
         public async Task<IActionResult> Update([FromBody] Customer customer) 
         {
             try
@@ -60,24 +57,22 @@ namespace API.Controllers
                 Console.Error.WriteLine(ex.ToString());
                 return BadRequest();
             }
-            return Ok(customer);
+            return Ok();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            Customer c = await _customerRepository.GetAsync(id);
             try
             {
-                await _customerRepository.DeleteAsync(c);
+                await _customerRepository.DeleteAsync(id);
+                return Ok();
             }
             catch (Exception ex)
             {
                 Console.Error.WriteLine(ex.ToString());
                 return BadRequest();
             }
-
-            return Ok(c);
         }
         /*[HttpPost]
         public async Task<IActionResult>
