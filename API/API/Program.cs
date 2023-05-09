@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IDbConnection>(_ => new NpgsqlConnection(builder.Configuration["PostgresConnectionString"]));
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IInvestmentRepository, InvestmentRepository>();
 
 builder.Services.AddControllers();
 
