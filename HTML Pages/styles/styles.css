@@ -15,7 +15,7 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    padding:20px 20px 0 20px;
+    padding:8px 8px 0 8px;
     width: auto;
     color: black;
     margin: 0;
@@ -88,7 +88,10 @@ nav  a:hover{
 /*---------------------------------------------------------------*/
 /*----Footer section CSS-------------------------------------------*/
 footer{
-    padding: 0 20px 20px 20px;
+    padding: 0 8px 8px 8px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .footer{
     background-color: #c2c2c2;
