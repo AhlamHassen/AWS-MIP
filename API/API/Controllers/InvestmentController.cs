@@ -4,25 +4,24 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-
-    [ApiController]
     [Route("[controller]")]
-    public class AccountController : ControllerBase
+    [ApiController]
+    public class InvestmentController : ControllerBase
     {
-        private readonly IAccountRepository _accountRepository;
+        private readonly IInvestmentRepository _investmentRepository;
 
-        public AccountController(IAccountRepository accountRepository)
+        private InvestmentController(IInvestmentRepository investmentRepository)
         {
-            _accountRepository = accountRepository;
+            _investmentRepository = investmentRepository;
         }
 
-        [HttpGet()]
-        public async Task<IActionResult> GetByCustomer([FromQuery] int customerId)
+        [HttpGet]
+        public async Task<IActionResult> GetInvestmentsByAccount([FromQuery] int accountId)
         {
             try
             {
-                var accounts = await _accountRepository.GetAccountsByCustomerAsync(customerId);
-                return Ok(accounts);
+                var investments = await _investmentRepository.GetInvestmentsByAccountAsync(accountId);
+                return Ok(investments);
             }
             catch (Exception ex)
             {
@@ -32,11 +31,11 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Account Account)
+        public async Task<IActionResult> Create([FromBody] Investment investment)
         {
             try
             {
-                await _accountRepository.CreateAsync(Account);
+                await _investmentRepository.CreateAsync(investment);
                 return Ok();
             }
             catch (Exception ex)
@@ -47,11 +46,11 @@ namespace API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] Account account)
+        public async Task<IActionResult> Update([FromBody] Investment investment)
         {
             try
             {
-                await _accountRepository.UpdateAsync(account);
+                await _investmentRepository.UpdateAsync(investment);
                 return Ok();
             }
             catch (Exception ex)
@@ -66,7 +65,7 @@ namespace API.Controllers
         {
             try
             {
-                await _accountRepository.DeleteAsync(id);
+                await _investmentRepository.DeleteAsync(id);
                 return Ok();
             }
             catch (Exception ex)

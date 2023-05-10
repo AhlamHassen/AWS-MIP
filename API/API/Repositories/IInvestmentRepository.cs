@@ -7,6 +7,6 @@ namespace API.Repositories
         Task<Investment[]> GetInvestmentsByAccountAsync(int accountId);
         Task CreateAsync(Investment investment);
         Task UpdateAsync(Investment investment);
-        Task DeleteAsync(Investment investment);
+        Task DeleteAsync(int id);
     }
 }

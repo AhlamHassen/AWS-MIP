@@ -16,10 +16,10 @@ namespace API.Repositories
             await _conn.ExecuteAsync(sql, investment);
         }
 
-        public async Task DeleteAsync(Investment investment)
+        public async Task DeleteAsync(int id)
         {
-            const string sql = "DELETE FROM Investment where InvestmentId = @InvestmentId;";
-            await _conn.ExecuteAsync(sql, investment);
+            const string sql = "DELETE FROM Investment where InvestmentId = @Id;";
+            await _conn.ExecuteAsync(sql, id);
         }
 
         public async Task<Investment[]> GetInvestmentsByAccountAsync(int accountId)
