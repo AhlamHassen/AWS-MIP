@@ -194,6 +194,34 @@ tbody tr:hover{
     }
 }
 
+/*--RiskProfiles.html--*/
+
+#content_risk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 45%;
+    padding: 30px;
+    /* height: 75%; */
+
+    background-color: #c2c2c2;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    box-shadow: 0 .4rem .8rem #0005;
+}
+
+#main_risk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 78vh;
+}
+
+#construction{
+    max-width: 100%;
+}
+
 /*---------------------------------------------------------------*/
 /*----Footer section CSS-------------------------------------------*/
 footer{
