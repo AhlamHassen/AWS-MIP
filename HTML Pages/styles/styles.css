@@ -226,9 +226,11 @@ tbody tr:hover{
 /*----Footer section CSS-------------------------------------------*/
 footer{
     padding: 0 8px 8px 8px;
-    position: absolute;
+    
     bottom: 0;
     width: 100%;
+    position: sticky;
+    top: 100%;
 }
 .footer{
     background-color: #c2c2c2;
