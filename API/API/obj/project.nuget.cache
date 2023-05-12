@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "1NS1L3T5I3bl+rqIV1jZ2tZpvlp69rQ1iUgh8gbV2yBKzP3j/Qas8rYv+0I4pwd2IbRHndEPvwHq45b1J0MWPA==",
+  "success": true,
+  "projectFilePath": "F:\\AWS-MIP\\API\\API\\API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rey\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Rey\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Rey\\.nuget\\packages\\npgsql\\7.0.4\\npgsql.7.0.4.nupkg.sha512",
+    "C:\\Users\\Rey\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

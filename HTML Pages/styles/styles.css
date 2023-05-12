@@ -1,0 +1,245 @@
+body{
+    
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    margin: 0;
+    
+    
+    
+} 
+
+/*---------------------------------------------------------------*/
+/*----Header section CSS-------------------------------------------*/
+
+    /*header for each page*/
+header{
+    display: flex;
+    flex-direction: column;
+    padding:8px 8px 0 8px;
+    width: auto;
+    color: black;
+    margin: 0;
+}
+
+    /*header-class-banner*/
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15% 0 15%;
+    overflow: auto;
+    width: auto;
+    background-color: #c2c2c2;
+
+}
+.banner img{
+    float: left;
+}
+
+h1{
+    margin-left: 5px;
+    width: auto;
+    position: relative;
+    margin-top: 20px;
+    font: 1.4em 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
+   
+}
+
+    /*nav: floats right- has hover feature */
+
+.menu {
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+nav{
+
+    font-size: 1.1em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+nav a {
+
+    list-style-type: none;
+    color: #000;
+}
+
+nav  a:hover{
+    color: white;
+}
+
+/*---------------------------------------------------------------*/
+/*----Main Content section CSS-------------------------------------------*/
+.main {
+    padding: 0 20px 0 20px;
+}
+
+.content {
+    padding: 0 15%;
+}
+
+/*--Customers.html--*/
+
+#main_table{
+    margin: 20px auto;
+    width: 60vw;
+    height: 70vh;
+    background-color: #fff9;
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+    
+
+
+}
+
+#content_table{
+    background-color: #c2c2c2;
+    height: 100%;
+    overflow: hidden;
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+
+}
+
+table, th, td {
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table_heading{
+    height: 5%;;
+    background-color: none;
+    padding: .8rem 1rem;
+    display: flex;
+    align-items: center ;
+    margin-bottom: 0;
+    
+}
+
+.table_body{
+    max-height: calc(90% - .8rem);
+    width: 100%;
+    background-color: #c2c2c2;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    box-shadow: 0 .4rem .8rem #0005;
+
+
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #d9d9d9;
+}
+tbody {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+tbody tr:nth-child(even){
+    background-color: #0000000b;
+
+}
+
+tbody tr:hover{
+    background-color: #fff6;
+}
+
+.riskLink{
+    text-decoration: none;
+    color: #006b21;
+    background-color: #86e49d;
+    padding: .4rem .6rem;
+    border-radius: 2rem;
+}
+
+.riskLink:hover{
+    color: #86e49d;
+    background-color: #006b21;
+}
+
+.table_body::-webkit-scrollbar{
+    width: 0.5em;
+    height: 0.5em;
+}
+
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body::-webkit-scrollbar-thumb:hover{
+    visibility: visible;
+}
+
+@media (max-width:1000px) {
+    td:not(:first-of-type){
+        min-width: 12.1rem;
+    }
+}
+
+/*--RiskProfiles.html--*/
+
+#content_risk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 45%;
+    padding: 30px;
+    /* height: 75%; */
+
+    background-color: #c2c2c2;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    box-shadow: 0 .4rem .8rem #0005;
+}
+
+#main_risk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 78vh;
+}
+
+#construction{
+    max-width: 100%;
+}
+
+/*---------------------------------------------------------------*/
+/*----Footer section CSS-------------------------------------------*/
+footer{
+    padding: 0 8px 0 0;
+    
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    top: 100%;
+}
+.footer{
+    background-color: #c2c2c2;
+    color: white;
+    font-weight: light;
+    padding: 8px 15% 8px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
