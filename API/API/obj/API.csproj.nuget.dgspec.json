@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\AWS-MIP\\API\\API\\API.csproj": {}
+    "C:\\Users\\louis\\OneDrive\\Documents\\GitHub\\AWS-MIP\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "F:\\AWS-MIP\\API\\API\\API.csproj": {
+    "C:\\Users\\louis\\OneDrive\\Documents\\GitHub\\AWS-MIP\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AWS-MIP\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\louis\\OneDrive\\Documents\\GitHub\\AWS-MIP\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "F:\\AWS-MIP\\API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Rey\\.nuget\\packages\\",
-        "outputPath": "F:\\AWS-MIP\\API\\API\\obj\\",
+        "projectPath": "C:\\Users\\louis\\OneDrive\\Documents\\GitHub\\AWS-MIP\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\louis\\OneDrive\\Documents\\GitHub\\AWS-MIP\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
